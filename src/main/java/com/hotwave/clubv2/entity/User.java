@@ -11,8 +11,6 @@ import lombok.Data;
 @Data
 public class User extends BaseEntity {
 
-    private Integer id;
-
     private String username;
 
     private String password;
