@@ -1,0 +1,31 @@
+# 服务
+server:
+  port: 8080
+
+Spring:
+  application:
+    name: clubv2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # 数据库驱动
+    url: jdbc:mysql://150.158.133.228:3306/clubv2?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true # 数据库连接地址
+    username: root
+    password: Mysql@123
+    minIdle: 10 # 最小空闲连接数
+    maxActive: 20 # 最大连接数
+    maxWait: 60000 # 超时时间
+    maxPoolPreparedStatementPerConnectionSize: 20 # 预编译语句最大数量
+  redis:
+    database: 0 #redis数据库索引，默认为0
+    host: 150.158.133.228 #redis服务器地址
+    port: 6379 #redis服务器连接端口
+    timeout: 5000 #redis连接超时时间
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+logging:
+  level:
+    root: info
+  file:
+    path: ./LogbackLogFile
+  config: logback-spring.xml

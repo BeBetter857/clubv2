@@ -23,8 +23,8 @@ public class BaseEntity {
 
     private Date updateTime;//更新时间
 
-    private String updateUserId;//更新人
+    private String updateBy;//更新人
 
-    private String createUserId;//创建人id
+    private String createBy;//创建人id
 
 }
