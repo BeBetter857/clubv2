@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 /**
@@ -20,23 +21,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName(value = "sys_user")
-public class User {
+public class User extends BaseEntity{
 
-//    private static final long serialVersionUID = -40356785423868312L;
+    private static final long serialVersionUID = -40356785423868312L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private String id; //主键
-
-    private Date createTime;//创建时间
-
-    private Date updateTime;//更新时间
-
-    private String updateBy;//更新人
-
-    private String createBy;//创建人id
     /**
      * 用户名
      */
+    @NotBlank
     private String userName;
 
     /**

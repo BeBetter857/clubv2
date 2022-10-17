@@ -23,11 +23,11 @@ Spring:
     expiration: 86400
     secret: test112322
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
+  mapper-locations: classpath*:/mapper/**Mapper.xml
 
 logging:
   config: classpath:logback-spring.xml
-#  level:
-#    root: info
-#  file:
-#    path: ./LogbackLogFile
+  level:
+    root: info
+  file:
+    path: ./LogbackLogFile
